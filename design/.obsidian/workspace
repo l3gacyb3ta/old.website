@@ -1,0 +1,93 @@
+{
+  "main": {
+    "id": "58b4b6422c3b5a5b",
+    "type": "split",
+    "children": [
+      {
+        "id": "3c570be10886be8b",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "ideas.md",
+            "mode": "source"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "5d3c79923ee01468",
+    "type": "split",
+    "children": [
+      {
+        "id": "b084a7fa6889b42d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ddfdcbcac09428ec",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "53217b91a9a77c21",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "64e9ab529c8e849f",
+    "type": "split",
+    "children": [
+      {
+        "id": "b641ee50eabfd7e7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "59530fed6eb20540",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "ideas.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "3c570be10886be8b",
+  "lastOpenFiles": [
+    "ideas.md"
+  ]
+}
