@@ -1,0 +1,22 @@
+name: helix
+version: 0.2.0
+
+authors:
+  - Arcade Wise <l3gacy.b3ta@gmail.com>
+description: |
+  a static site generator for nebula.
+
+dependencies:
+  markd:
+    github: icyleaf/markd
+  crinja:
+    github: straight-shoota/crinja
+
+
+targets:
+  monis:
+    main: src/monis.cr
+
+crystal: 1.0.0
+
+license: UNLICENSE
