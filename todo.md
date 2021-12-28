@@ -1,8 +1,11 @@
 - [ ] Create a [[theme]]
 - [ ] Do a license
-- [ ] Create names for the components
-- [ ] Make a name for the site
+- [ ] Create names for the components (different nebulas)
+- [X] Make a name for the site
 - [ ] mockups
 - [ ] start work on ssg
 - [ ] start work on helper scripts/clis
 - [ ] more to come!
+- [ ] deploy
+- [ ] join webrings
+	- [ ] XXIIVV?

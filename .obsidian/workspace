@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "todo.md",
+            "file": "README.md",
             "mode": "source"
           }
         }
@@ -39,7 +39,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "Nebula",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "todo.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,13 +88,15 @@
   },
   "active": "5b8f581a8a58ca49",
   "lastOpenFiles": [
-    "todo.md",
-    "design/art/theme.md",
-    "design/technical.md",
-    "design/art.md",
-    "design/art/color.md",
-    "design/art/background.md",
     "README.md",
-    "design/ideas.md"
+    "LICENSE.md",
+    "software/UNLICENSE.md",
+    "todo.md",
+    "design/art.md",
+    "design/technical.md",
+    "design/core.md",
+    "design/art/theme.md",
+    "design/art/color.md",
+    "design/art/background.md"
   ]
 }

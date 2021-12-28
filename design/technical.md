@@ -1,8 +1,8 @@
 # technical
 
 ## Software:
-- Static Site Generator
-- CLI for quick access
+- Static Site Generator (helix)
+- CLI for quick access (carina)
 - Hosting solution (eventually)
 
 ## inside
