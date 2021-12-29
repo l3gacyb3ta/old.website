@@ -14,8 +14,8 @@ dependencies:
 
 
 targets:
-  monis:
-    main: src/monis.cr
+  helix:
+    main: src/helix.cr
 
 crystal: 1.0.0
 

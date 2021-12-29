@@ -6,8 +6,8 @@ require "markd"
 require "yaml"
 
 # The main monis engine
-module Monis
-  VERSION = "0.4.0"
+module Helix
+  VERSION = "0.5.0"
 
   if Dir.exists? "out"
     puts "Cleaning old generation"

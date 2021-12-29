@@ -2,7 +2,7 @@ CRYSTAL_BIN ?= crystal
 SHARDS_BIN ?= shards
 PREFIX ?= /usr/local
 SHARD_BIN ?= ../../bin
-THREADS ?= --threads=24
+THREADS ?= --threads=12
 CRFLAGS ?= -p --production
 
 build: clean
