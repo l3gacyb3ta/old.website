@@ -90,8 +90,12 @@ module Helix
       # Do something with the front matter and content.
       # Parse the front matter as YAML, JSON or something else?
 
+      builtin = {
+        "path" => filename.lstrip("content/"),
+      }
+
       # Render the template HTML with our data
-      basicconfig = {"content" => content, "config" => configfiledata}
+      basicconfig = {"content" => content, "config" => configfiledata, "builtin" => builtin}
       # p! basicconfig.merge(configdata)
       rendered_page = template.render(basicconfig.merge(frontdata))
 
@@ -128,7 +132,7 @@ module Helix
   puts "Tranfering static content"
   if Dir.exists? "static"
     FileUtils.mkdir "out/static"
-    FileUtils.cp_r "static", "out/static"
+    FileUtils.cp_r "static/*", "out/static"
   end
   if Dir.exists? "theme/static"
     if Dir.exists? "out/static"

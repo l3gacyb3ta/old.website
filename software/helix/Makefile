@@ -13,16 +13,16 @@ clean:
 
 install: build
 	mkdir -p $(PREFIX)/bin
-	cp ./bin/monis $(PREFIX)/bin
+	cp ./bin/helix $(PREFIX)/bin
 
 bin: build
 	mkdir -p $(SHARD_BIN)
-	cp ./bin/monis $(SHARD_BIN)
+	cp bin/helix $(SHARD_BIN)
 
 test: build
 	$(CRYSTAL_BIN) spec
-	./bin/monis --all
+	./bin/helix --all
 
 dev:
 	$(SHARDS_BIN) build -p $(THREADS)
-	mv ./bin/monis ./
+	mv ./bin/helix ./
