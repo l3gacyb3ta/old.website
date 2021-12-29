@@ -1,4 +1,4 @@
 url: "localhost:8000"
 stylesheet: "stylesheet.css"
 # black gray white
-recolor: "#15121C #988BA2 #988BA2"
+recolor: "#002b36 #839496 #fdf6e3"

@@ -1,12 +1,23 @@
 :root {
-  --border-color: black;
-  --border-acent-color: blue;
-  --shadow-color: black;
+  --border-color: #002b36;
+  --border-acent-color: #2aa198;
+  --shadow-color: #657b83;
+  --background-color: #fdf6e3;
+  --main-background-color: #fff;
+  --text-color: black;
+  --code-color: #eee8d5;
+}
+
+body {
+  background-color: var(--background-color);
 }
 
 main {
   margin: auto;
-  width: 50%;
+  width: 60%;
+  background-color: var(--main-background-color);
+
+  color: var(--text-color);
 
   border: 2px solid var(--border-color);
   padding: 0;
@@ -17,6 +28,24 @@ main {
 
 main h1 {
   font-size: 230%;
+}
+
+main hr {
+  border: 1px solid var(--border-acent-color);
+}
+
+main blockquote {
+  border-left-width: 2px;
+  border-left-style: solid;
+  border-left-color: var(--border-acent-color);
+  padding-left: 20px;
+  margin-left: 20px;
+}
+
+main pre {
+  padding: 3px;
+  border-radius: 3px;
+  background-color: var(--code-color);
 }
 
 .imgcontainer {
@@ -35,7 +64,7 @@ main h1 {
 }
 
 main .imgcontainer p {
-  color: blue;
+  color: var(--border-acent-color);
 }
 
 .titlebar {
@@ -51,7 +80,6 @@ main .imgcontainer p {
   padding: 0px 10px 10px 10px;
 }
 
-
 @media screen and (max-width: 800px) {
   main {
     width: 95%;
@@ -60,5 +88,9 @@ main .imgcontainer p {
 
   .imgcontainer {
     width: 90%;
+  }
+
+  body {
+    overflow: hidden; /* Hide scrollbars */
   }
 }

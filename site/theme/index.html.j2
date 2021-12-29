@@ -3,6 +3,9 @@
         <title>{{ title }}</title>
         <link rel="icon" href="{{ favicon }}">
         <link rel="stylesheet" href="/static/{{ config.stylesheet }}">
+        {% if code == 'true' %}
+            <link rel="stylesheet" href="/static/default.min.css">
+        {% endif %}
     </head>
     <body>
         <main>
@@ -13,5 +16,10 @@
             {{ content | safe }}
             </div>
         </main>
+
+        {% if code == 'true' %}
+            <script src="/static/highlight.min.js"></script>
+            <script>hljs.highlightAll();</script>
+        {% endif %}
     </body>
 </html>

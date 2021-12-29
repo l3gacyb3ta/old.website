@@ -157,7 +157,7 @@ module Helix
     jsFiles = Dir.glob "theme/static/*.js"
     jsFiles.each do |filename|
       spawn do
-        File.write "out/static/" + Path[filename].basename, HtmlMinifier.minify!(File.read(filename))
+        File.write "out/static/" + Path[filename].basename, File.read(filename)
       end
     end
 
