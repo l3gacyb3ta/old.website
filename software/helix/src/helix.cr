@@ -1,4 +1,5 @@
 require "./front_matter"
+require "./render"
 require "option_parser"
 require "html-minifier"
 require "file_utils"
@@ -26,7 +27,7 @@ module Helix
   # `/out`: This is the output of the generator once it has been run !!DONT STORE ANYTHING IMPORTANT HERE IT GETS WIPED ON EACH RUN!!
 
   OptionParser.parse do |parser|
-    parser.banner = "Monis CLI"
+    parser.banner = "helix CLI"
     parser.on "init", "create the basic folder structure." do
       _init = true
     end
@@ -70,6 +71,10 @@ module Helix
   content = "Nothing yet!"
   template = env.get_template "index.html.j2"
 
+  # set up renderer
+  options = Markd::Options.new()
+  renderer = NebulaRenderEngine.new(options)
+
   files.each do |filename|
     spawn do # Do this conncurently with other files! Performance!
       puts "Generating HTML for " + filename
@@ -79,7 +84,8 @@ module Helix
         permalink = data["permalink"].as_s
 
         rawmd = content_io.gets_to_end
-        content = Markd.to_html rawmd
+        document = Markd::Parser.parse(rawmd, options)
+        content = renderer.render document
 
         # This allows for custom configs for themes.
         frontdata = {} of String => String
@@ -141,15 +147,22 @@ module Helix
       FileUtils.mkdir_p "out/static"
     end
 
-    cssFiles = Dir.glob "theme/static/*css"
+    cssFiles = Dir.glob "theme/static/*.css"
     cssFiles.each do |filename|
       spawn do
-        File.write "out/static/" + Path[filename].basename , HtmlMinifier.minify!(File.read(filename))
+        File.write "out/static/" + Path[filename].basename, HtmlMinifier.minify!(File.read(filename))
+      end
+    end
+
+    jsFiles = Dir.glob "theme/static/*.js"
+    jsFiles.each do |filename|
+      spawn do
+        File.write "out/static/" + Path[filename].basename, HtmlMinifier.minify!(File.read(filename))
       end
     end
 
     # Process image files into dithered files
-    imgFiles = Dir.glob "theme/static/*.jpg"
+    imgFiles = Dir.glob ["theme/static/*.jpg", "theme/static/*.png", "theme/static/*.gif", "theme/static/*.jpeg"]
     imgFiles.each do |filename|
       spawn do
         # create a new .png filename

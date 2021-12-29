@@ -1,16 +1,41 @@
 :root {
   --border-color: black;
+  --border-acent-color: blue;
   --shadow-color: black;
 }
 
 main {
   margin: auto;
   width: 50%;
+
   border: 2px solid var(--border-color);
   padding: 0;
   min-height: 90vh;
 
   box-shadow: 5px 5px 0px 0px var(--shadow-color);
+}
+
+main h1 {
+  font-size: 230%;
+}
+
+.imgcontainer {
+  border: 2px solid var(--border-acent-color);
+  box-shadow: 5px 5px 0px 0px var(--shadow-color);
+  padding-top: 15px;
+
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.imgcontainer img {
+  border-top: 2px solid var(--border-acent-color);
+  max-width: 100%;
+}
+
+main .imgcontainer p {
+  color: blue;
 }
 
 .titlebar {
@@ -24,4 +49,16 @@ main {
 
 .content {
   padding: 0px 10px 10px 10px;
+}
+
+
+@media screen and (max-width: 800px) {
+  main {
+    width: 95%;
+    min-height: 95vh;
+  }
+
+  .imgcontainer {
+    width: 90%;
+  }
 }
