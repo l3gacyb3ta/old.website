@@ -19,3 +19,7 @@ build-helix:
 	mkdir -p bin
 	cd software/helix && make build
 	mv software/helix/bin/helix ./bin
+
+install-deps-linux:
+	wget https://github.com/makeworld-the-better-one/didder/releases/download/v1.1.0/didder_1.1.0_linux_64-bit -O /usr/local/bin/didder
+	chmod +x /usr/local/bin/didder

@@ -33,7 +33,7 @@ module Helix
   end
 
   if _init
-    FileUtils.mkdir ["content", "theme", "theme/static", "static"]
+    FileUtils.mkdir_p ["content", "theme", "theme/static", "static"]
     File.write "theme/index.html.j2", "{{content}}"
     # quit the program
     exit
@@ -46,7 +46,7 @@ module Helix
   # TODO: LOAD FROM CUSTOM DIR
 
   rawfiles = Dir.glob "content/**/*" # Files that are under content
-  files = [] of String                # An empty Array of filenames without directories
+  files = [] of String               # An empty Array of filenames without directories
 
   rawfiles.each do |filename|
     if filename.ends_with? ".md"
@@ -71,91 +71,103 @@ module Helix
   template = env.get_template "index.html.j2"
 
   files.each do |filename|
-    puts "Generating HTML for " + filename
+    spawn do # Do this conncurently with other files! Performance!
+      puts "Generating HTML for " + filename
 
-    FrontMatter.open(filename) { |front_matter, content_io|
-      data = YAML.parse front_matter
-      permalink = data["permalink"].as_s
+      FrontMatter.open(filename) { |front_matter, content_io|
+        data = YAML.parse front_matter
+        permalink = data["permalink"].as_s
 
-      rawmd = content_io.gets_to_end
-      content = Markd.to_html rawmd
+        rawmd = content_io.gets_to_end
+        content = Markd.to_html rawmd
 
-      # This allows for custom configs for themes.
-      frontdata = {} of String => String
+        # This allows for custom configs for themes.
+        frontdata = {} of String => String
 
-      data.as_h.each do |item|
-        frontdata[item[0].as_s] = item[1].as_s
-        # p! configdata
-      end
-
-      # Do something with the front matter and content.
-      # Parse the front matter as YAML, JSON or something else?
-
-      builtin = {
-        "path" => filename.lstrip("content/"),
-      }
-
-      # Render the template HTML with our data
-      basicconfig = {"content" => content, "config" => configfiledata, "builtin" => builtin}
-      # p! basicconfig.merge(configdata)
-      rendered_page = template.render(basicconfig.merge(frontdata))
-
-      # write out rendered_page
-
-      # create directories for page
-      subs = permalink.split("/")
-      count = 0
-
-      subs.each do |dirname|
-        if dirname == subs[-1]
-        else
-          recreateddir = "out" + subs[0..count].join('/')
-          if Dir.exists? recreateddir
-          else
-            FileUtils.mkdir recreateddir
-          end
+        data.as_h.each do |item|
+          frontdata[item[0].as_s] = item[1].as_s
+          # p! configdata
         end
-        count = count + 1
-      end
 
-      rendered_page = HtmlMinifier.minify! rendered_page
+        # Do something with the front matter and content.
+        # Parse the front matter as YAML, JSON or something else?
 
-      if Dir.exists? "out"
-        File.write "out" + permalink + ".html", rendered_page
-      else
-        FileUtils.mkdir "out"
-        File.write "out" + permalink + ".html", rendered_page
-      end
-      puts "Generated " + permalink + ".html"
-    }
+        builtin = {
+          "path" => filename.lstrip("content/"),
+        }
+
+        # Render the template HTML with our data
+        basicconfig = {"content" => content, "config" => configfiledata, "builtin" => builtin}
+        # p! basicconfig.merge(configdata)
+        rendered_page = template.render(basicconfig.merge(frontdata))
+
+        # write out rendered_page
+
+        # create directories for page
+        subs = permalink.split("/")
+        count = 0
+
+        subs.each do |dirname|
+          if dirname == subs[-1]
+          else
+            recreateddir = "out" + subs[0..count].join('/')
+            if Dir.exists? recreateddir
+            else
+              FileUtils.mkdir_p recreateddir
+            end
+          end
+          count = count + 1
+        end
+
+        rendered_page = HtmlMinifier.minify! rendered_page
+
+        if Dir.exists? "out"
+          File.write "out" + permalink + ".html", rendered_page
+        else
+          FileUtils.mkdir_p "out"
+          File.write "out" + permalink + ".html", rendered_page
+        end
+        puts "Generated " + permalink + ".html"
+      }
+    end
   end
 
   puts "HTML Generation finished!"
 
   puts "Tranfering static content"
-  if Dir.exists? "static"
-    FileUtils.mkdir "out/static"
-    
-    
-
-    FileUtils.cp_r "static/*", "out/static"
-  end
   if Dir.exists? "theme/static"
-    staticFiles = Dir.glob "theme/static/**/*"
-    puts staticFiles
-
-    staticFiles.each do |filename|
-      if filename.ends_with? ".css" 
-        puts HtmlMinifier.minify! File.read(filename)
-      end
-    end
-    
     if Dir.exists? "out/static"
     else
-      FileUtils.mkdir "out/static"
+      FileUtils.mkdir_p "out/static"
     end
 
-    FileUtils.cp_r "theme/static", "out/"
+    cssFiles = Dir.glob "theme/static/*css"
+    cssFiles.each do |filename|
+      spawn do
+        File.write "out/static/" + Path[filename].basename , HtmlMinifier.minify!(File.read(filename))
+      end
+    end
+
+    # Process image files into dithered files
+    imgFiles = Dir.glob "theme/static/*.jpg"
+    imgFiles.each do |filename|
+      spawn do
+        # create a new .png filename
+        outputFilename = "out/static/" + Path[filename].stem.to_s + ".png"
+        # generate a didder command to fix images
+        command = "didder -i " + filename + " -o " + outputFilename + " --palette 'black gray white' --recolor '" + configfiledata["recolor"] + "' edm --serpentine FloydSteinberg"
+        # puts command
+        system command
+      end
+    end
+
+    # Static files that need no processing
+    staticFiles = Dir.glob ["static/*.txt", "theme/static/*.txt"]
+    staticFiles.each do |filename|
+      spawn do # ayyyyee
+        FileUtils.cp filename, "out/static/"
+      end
+    end
   end
   puts "Static content moved"
 end
