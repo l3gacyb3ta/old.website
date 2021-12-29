@@ -11,6 +11,8 @@ dependencies:
     github: icyleaf/markd
   crinja:
     github: straight-shoota/crinja
+  html-minifier:
+    github: sam0x17/html-minifier
 
 
 targets:

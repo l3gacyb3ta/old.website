@@ -1,5 +1,6 @@
 require "./front_matter"
 require "option_parser"
+require "html-minifier"
 require "file_utils"
 require "crinja"
 require "markd"
@@ -117,6 +118,8 @@ module Helix
         count = count + 1
       end
 
+      rendered_page = HtmlMinifier.minify! rendered_page
+
       if Dir.exists? "out"
         File.write "out" + permalink + ".html", rendered_page
       else
@@ -132,15 +135,27 @@ module Helix
   puts "Tranfering static content"
   if Dir.exists? "static"
     FileUtils.mkdir "out/static"
+    
+    
+
     FileUtils.cp_r "static/*", "out/static"
   end
   if Dir.exists? "theme/static"
+    staticFiles = Dir.glob "theme/static/**/*"
+    puts staticFiles
+
+    staticFiles.each do |filename|
+      if filename.ends_with? ".css" 
+        puts HtmlMinifier.minify! File.read(filename)
+      end
+    end
+    
     if Dir.exists? "out/static"
     else
       FileUtils.mkdir "out/static"
     end
 
-    FileUtils.cp_r "theme/static", "out/static"
+    FileUtils.cp_r "theme/static", "out/"
   end
   puts "Static content moved"
 end

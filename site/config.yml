@@ -1,2 +1,2 @@
 url: "localhost:8000"
-stylesheet: "/static/stylesheet.css"
+stylesheet: "stylesheet.css"
