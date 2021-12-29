@@ -2,11 +2,12 @@ SHARDS_BIN ?= shards
 THREADS ?= --threads=12
 CRFLAGS ?= -p --production
 
-build-all: build-site
+build-all: build-helix build-site
 	@echo "---- Built all"
 
-build-site: build-helix build-content
+build-site: build-content
 	@echo "---- Building site"
+	@sleep 1
 	rm -rf www
 	mv site/out www
 
