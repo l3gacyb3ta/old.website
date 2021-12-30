@@ -12,7 +12,7 @@ sources:
 tasks:
 - package: |
     cd nebula
-    make install-deps-linux
+    make install-deps-non-root
     make
     tar -C www -cvz . > ../site.tar.gz
 - upload: |
