@@ -72,7 +72,7 @@ module Helix
   template = env.get_template "index.html.j2"
 
   # set up renderer
-  options = Markd::Options.new()
+  options = Markd::Options.new
   renderer = NebulaRenderEngine.new(options)
 
   files.each do |filename|
@@ -164,14 +164,12 @@ module Helix
     # Process image files into dithered files
     imgFiles = Dir.glob ["theme/static/*.jpg", "theme/static/*.png", "theme/static/*.gif", "theme/static/*.jpeg"]
     imgFiles.each do |filename|
-      spawn do
-        # create a new .png filename
-        outputFilename = "out/static/" + Path[filename].stem.to_s + ".png"
-        # generate a didder command to fix images
-        command = "didder -i " + filename + " -o " + outputFilename + " --palette 'black gray white' --recolor '" + configfiledata["recolor"] + "' edm --serpentine FloydSteinberg"
-        # puts command
-        system command
-      end
+      # create a new .png filename
+      outputFilename = "out/static/" + Path[filename].stem.to_s + ".png"
+      # generate a didder command to fix images
+      command = "didder -i " + filename + " -o " + outputFilename + " --palette 'black gray white' --recolor '" + configfiledata["recolor"] + "' edm --serpentine FloydSteinberg"
+      # puts command
+      system command
     end
 
     # Static files that need no processing
