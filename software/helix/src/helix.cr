@@ -125,8 +125,6 @@ module Helix
           count = count + 1
         end
 
-        rendered_page = HtmlMinifier.minify! rendered_page
-
         if Dir.exists? "out"
           File.write "out" + permalink + ".html", rendered_page
         else
