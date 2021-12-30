@@ -26,5 +26,6 @@ install-deps-linux:
 	chmod +x /usr/local/bin/didder
 
 install-deps-non-root:
+	mkdir bin
 	wget https://github.com/makeworld-the-better-one/didder/releases/download/v1.1.0/didder_1.1.0_linux_64-bit -O bin/didder
-	chmod +x nebula/bin/didder
+	chmod +x bin/didder
