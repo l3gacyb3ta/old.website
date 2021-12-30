@@ -6,7 +6,7 @@ packages:
   - libxml2-dev
 oauth: pages.sr.ht/PAGES:RW
 environment:
-  site: beta.raleighwi.se
+  site: arcade.srht.site
 sources:
   - https://git.sr.ht/~arcade/nebula
 tasks:
