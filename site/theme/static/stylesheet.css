@@ -10,6 +10,7 @@
 
 body {
   background-color: var(--background-color);
+  font-family: serif;
 }
 
 main {
@@ -56,6 +57,7 @@ main pre {
   width: 50%;
   margin: 0 auto;
   text-align: center;
+  margin-bottom: 10px;
 }
 
 .imgcontainer img {

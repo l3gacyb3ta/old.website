@@ -1,0 +1,72 @@
+#! /usr/bin/bash
+
+# Create a file
+create() {
+    # Basic input checks and documentation
+    if [ "$1" == "" ]
+    then
+        echo "Usage: carina create <title>"
+    else
+        echo "Creating $1"
+        # The basic file format
+        echo "---
+title: \"$1\"
+permalink: \"/$1\"
+---
+# $1" > ~/projects/nebula/site/content/$1.md
+
+        # Open the newly created file in the users prefered editor
+        $EDITOR ~/projects/nebula/site/content/$1.md
+    fi
+}
+
+# Publish the file with spell check
+publish() {
+    # Rember where we are
+    currentDir=$(pwd)
+    
+    cd ~/projects/nebula/site/content
+
+    # git add
+    git add .
+    
+    # Create a git commit message 
+    echo "Commit message:"
+    read commitMSG
+
+    git commit -m "$commitMSG"
+
+    git push
+    
+    cd $currentDir
+}
+
+check() {
+    # Rember where we are
+    currentDir=$(pwd)
+    
+    cd ~/projects/nebula/site/content
+
+    # spell check
+    aspell -c *.md
+
+    echo "All checked!"
+
+    cd $currentDir
+}
+
+# Main CLI operation
+case $1 in 
+    create)
+        create $2
+    ;;
+    check)
+        check
+    ;;
+    publish)
+        publish
+    ;;
+    *)
+        echo "Usage: carina (create | check | publish)"
+    ;;
+esac

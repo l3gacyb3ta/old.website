@@ -1,7 +1,8 @@
 image: alpine/latest
 packages:
-  - crystal
+  - aspell
   - shards
+  - crystal
   - yaml-dev
   - libxml2-dev
 oauth: pages.sr.ht/PAGES:RW

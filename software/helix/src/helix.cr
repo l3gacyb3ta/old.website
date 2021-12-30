@@ -9,7 +9,7 @@ require "yaml"
 
 # The main monis engine
 module Helix
-  VERSION = "0.5.0"
+  VERSION = "0.6.0"
 
   if Dir.exists? "out"
     puts "Cleaning old generation"
@@ -73,7 +73,6 @@ module Helix
 
   # set up renderer
   options = Markd::Options.new
-  renderer = NebulaRenderEngine.new(options)
 
   files.each do |filename|
     spawn do # Do this conncurently with other files! Performance!
@@ -85,6 +84,7 @@ module Helix
 
         rawmd = content_io.gets_to_end
         document = Markd::Parser.parse(rawmd, options)
+        renderer = NebulaRenderEngine.new(options)
         content = renderer.render document
 
         # This allows for custom configs for themes.
@@ -162,7 +162,7 @@ module Helix
     end
 
     # Process image files into dithered files
-    imgFiles = Dir.glob ["theme/static/*.jpg", "theme/static/*.png", "theme/static/*.gif", "theme/static/*.jpeg"]
+    imgFiles = Dir.glob ["theme/static/*.jpg", "theme/static/*.png", "theme/static/*.gif", "theme/static/*.jpeg", "content/static/*.jpg", "content/static/*.png", "content/static/*.gif", "content/static/*.jpeg"]
     imgFiles.each do |filename|
       # create a new .png filename
       outputFilename = "out/static/" + Path[filename].stem.to_s + ".png"
