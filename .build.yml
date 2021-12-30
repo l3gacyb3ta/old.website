@@ -10,10 +10,12 @@ environment:
 sources:
   - https://git.sr.ht/~arcade/nebula
 tasks:
+- setup: |
+    mkdir bin
+    wget https://github.com/makeworld-the-better-one/didder/releases/download/v1.1.0/didder_1.1.0_linux_64-bit -O /home/build/bin/didder
+    export PATH="/home/builds/bin:$PATH"
 - package: |
     cd nebula
-    make install-deps-non-root
-    export PATH=$PATH:bin
     make
     tar -C www -cvz . > ../site.tar.gz
 - upload: |
