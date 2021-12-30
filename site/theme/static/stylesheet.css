@@ -72,7 +72,7 @@ main pre {
 }
 
 main .imgcontainer p {
-  color: var(--border-acent-color);
+  color: #1F6161; /* a11y */
 }
 
 .titlebar {

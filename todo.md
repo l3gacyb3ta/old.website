@@ -5,6 +5,7 @@
 - [X] mockups
 - [X] start work on ssg
 - [X] start work on helper scripts/clis
+- [ ] Fix contrast between alt and white
 - [ ] Create actual content.
 - [ ] emoji script.
 - [ ] deploy
