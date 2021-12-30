@@ -13,6 +13,7 @@ tasks:
 - package: |
     cd nebula
     make install-deps-non-root
+    export PATH=$PATH:bin
     make
     tar -C www -cvz . > ../site.tar.gz
 - upload: |
