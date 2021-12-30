@@ -18,7 +18,7 @@ tasks:
 - package: |
     export PATH="$PATH:/home/build/bin"
     cd nebula
-    make
-    tar -C www -cvz . > ../site.tar.gz
+    make build-content
+    tar -C site/out -cvz . > ../site.tar.gz
 - upload: |
     acurl -f https://pages.sr.ht/publish/$site -Fcontent=@site.tar.gz

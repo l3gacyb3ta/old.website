@@ -11,7 +11,7 @@ build-site: build-content
 	rm -rf www
 	mv site/out www
 
-build-content:
+build-content: build-helix
 	@echo "---- Building content"
 	cd site && ../bin/helix
 
