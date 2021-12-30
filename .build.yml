@@ -1,0 +1,16 @@
+image: alpine/latest
+packages:
+  - crystal
+  - shards
+oauth: pages.sr.ht/PAGES:RW
+environment:
+  site: raleighwi.se
+sources:
+  - https://git.sr.ht/~arcade/nebula
+tasks:
+- package: |
+    cd nebula
+    make
+    tar -C www -cvz . > ../site.tar.gz
+- upload: |
+    acurl -f https://pages.sr.ht/publish/$site -Fcontent=@site.tar.gz
