@@ -5,6 +5,9 @@ CRFLAGS ?= -p --production
 build-all: build-helix build-site
 	@echo "---- Built all"
 
+build-all-dev: build-helix-dev build-site
+	@echo "---- Built all-dev"
+
 build-site: build-content
 	@echo "---- Building site"
 	@sleep 1
@@ -15,10 +18,17 @@ build-content: build-helix
 	@echo "---- Building content"
 	cd site && ../bin/helix
 
-build-helix:
+
+build-helix-dev:
 	@echo "---- Building helix"
 	mkdir -p bin
 	cd software/helix && make build
+	mv software/helix/bin/helix ./bin
+
+build-helix:
+	@echo "---- Building helix"
+	mkdir -p bin
+	CRFLAGS="--pproduction" cd software/helix && CRFLAGS="--production" make build
 	mv software/helix/bin/helix ./bin
 
 install-deps-linux:
