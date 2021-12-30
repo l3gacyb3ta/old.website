@@ -2,6 +2,8 @@ image: alpine/latest
 packages:
   - crystal
   - shards
+  - yaml-dev
+  - libxml2
 oauth: pages.sr.ht/PAGES:RW
 environment:
   site: raleighwi.se
