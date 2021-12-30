@@ -1,11 +1,12 @@
-- [ ] Create a [[theme]]
-- [ ] Do a license
-- [ ] Create names for the components (different nebulas)
+- [X] Create a [[theme]]
+- [X] Do a license
+- [X] Create names for the components (different nebulas)
 - [X] Make a name for the site
-- [ ] mockups
-- [ ] start work on ssg
-- [ ] start work on helper scripts/clis
-- [ ] more to come!
+- [X] mockups
+- [X] start work on ssg
+- [X] start work on helper scripts/clis
+- [ ] Create actual content.
+- [ ] emoji script.
 - [ ] deploy
 - [ ] join webrings
 	- [ ] XXIIVV?

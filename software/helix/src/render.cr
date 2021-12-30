@@ -17,7 +17,7 @@ class NebulaRenderEngine < Markd::HTMLRenderer
       if @disable_tag == 0
         destination = node.data["destination"].as(String)
         destination = resolve_uri(destination, node)
-        literal(%(<div class='imgcontainer'><img src="#{escape(destination)}" /> <p class='image-alt'>~ "))
+        literal(%(<div class='imgcontainer'><img alt='A description is directly below this image, prefaced by a tilde.' src="#{escape(destination)}" /> <p class='image-alt'>~ "))
       end
       @disable_tag += 1
     else
