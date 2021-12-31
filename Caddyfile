@@ -1,0 +1,8 @@
+localhost {
+    encode gzip
+
+    root * /home/arc/projects/nebula/www
+    file_server
+
+    header /static/* Cache-Control max-age=172800
+}

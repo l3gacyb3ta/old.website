@@ -145,6 +145,7 @@ module Helix
       FileUtils.mkdir_p "out/static"
     end
 
+    # css minification
     cssFiles = Dir.glob "theme/static/*.css"
     cssFiles.each do |filename|
       spawn do
@@ -152,6 +153,7 @@ module Helix
       end
     end
 
+    # JavaScript owo
     jsFiles = Dir.glob "theme/static/*.js"
     jsFiles.each do |filename|
       spawn do
