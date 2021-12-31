@@ -18,11 +18,10 @@ build-content: build-helix
 	@echo "---- Building content"
 	cd site && ../bin/helix
 
-
 build-helix-dev:
 	@echo "---- Building helix"
 	mkdir -p bin
-	cd software/helix && make build
+	cd software/helix && THREADS=$(THREADS) make build
 	mv software/helix/bin/helix ./bin
 
 build-helix:

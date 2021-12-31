@@ -1,4 +1,4 @@
-localhost {
+drop.raleighiwi.se {
     encode gzip
 
     root * /home/arc/projects/nebula/www
