@@ -18,6 +18,10 @@ build-content: build-helix
 	@echo "---- Building content"
 	cd site && ../bin/helix
 
+build-drop-content:
+	@echo "---- Building drop content"
+	cd site && ../bin/helix
+
 
 build-helix-dev:
 	@echo "---- Building helix"
