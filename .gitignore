@@ -4,3 +4,10 @@
 site/out
 
 bin
+**/bin
+
+**/lib
+lib
+
+.vangaurd
+/software/starport/vangaurd/bin

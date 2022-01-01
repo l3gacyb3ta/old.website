@@ -1,0 +1,15 @@
+name: vangaurd
+version: 0.1.0
+
+authors:
+  - Arcade Wise <l3gacy.b3ta@disroot.org>
+
+targets:
+  vangaurd:
+    main: src/main.cr
+
+dependencies:
+  ctoml-cr:
+    github: syeopite/ctoml-cr
+
+license: UNLICENSE

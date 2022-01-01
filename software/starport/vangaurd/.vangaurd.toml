@@ -1,0 +1,21 @@
+[dependencies]
+    packages = [
+        "crystal",
+        "shards"
+    ]
+
+    binary_downloads = [
+        ["https://github.com/makeworld-the-better-one/didder/releases/download/v1.1.0/didder_1.1.0_linux_64-bit", "didder"]
+    ]
+
+
+[source]
+    dir = "."
+
+[build]
+    main = """
+    shards build
+    """
+    install = """
+    cp ./bin/vangaurd ./.vangaurd/install/
+    """
