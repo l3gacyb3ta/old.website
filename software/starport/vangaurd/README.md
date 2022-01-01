@@ -8,30 +8,33 @@ Write
 Here is a full example, I'll anotate this later: <TODO>
 ```toml
 [dependencies]
-packages = [
-    "crystal",
-    "shards"
-]
-binary_downloads = {
-    "didder" = "https://github.com/makeworld-the-better-one/didder/releases/download/v1.1.0/didder_1.1.0_linux_64-bit"
-}
+    packages = [
+        "crystal",
+        "shards"
+    ]
+
+    binary_downloads = ["https://github.com/makeworld-the-better-one/didder/releases/download/v1.1.0/didder_1.1.0_linux_64-bit", "didder"]
 
 [source]
-dir = "."
+    dir = "."
 
 [build]
-main = """
-shards build
-"""
-install = """
-cp ./bin/didder ./.vangaurd/bin/
-"""
+    main = """
+    shards build
+    """
+    install = """
+    cp ./bin/didder ./.vangaurd/bin/
+    """
 ```
 
 `[source]` currently only accepts dir, but in the future I plan to add git and even tarballs.
 
 ## .vangaurd folder
-Currently, .vangaurd is a folder that contains just `bin` and anything that is in `bin` at the end of the build process will be installed on the highest level permissions allow
+`.vangaurd` is a folder that contains all the files vangaurd generates (binaries, currently).
+After the `install` phase of `[build]`, the `.vangaurd/install` folder is copied to `~/.local/bin`.
+
+## Why vangaurd?
+Vangaurd is the name of the first rockets the US made to deliver payloads to orbit, and vangaurd delivers binaries to the nebula!
 
 ## AI Disclosure:
 

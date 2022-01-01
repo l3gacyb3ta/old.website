@@ -146,28 +146,28 @@ module Helix
     end
 
     # css minification
-    cssFiles = Dir.glob "theme/static/*.css"
-    cssFiles.each do |filename|
+    css_files = Dir.glob "theme/static/*.css"
+    css_files.each do |filename|
       spawn do
         File.write "out/static/" + Path[filename].basename, HtmlMinifier.minify!(File.read(filename))
       end
     end
 
     # JavaScript owo
-    jsFiles = Dir.glob "theme/static/*.js"
-    jsFiles.each do |filename|
+    js_files = Dir.glob "theme/static/*.js"
+    js_files.each do |filename|
       spawn do
         File.write "out/static/" + Path[filename].basename, File.read(filename)
       end
     end
 
     # Process image files into dithered files
-    imgFiles = Dir.glob ["theme/static/*.jpg", "theme/static/*.png", "theme/static/*.gif", "theme/static/*.jpeg", "content/static/*.jpg", "content/static/*.png", "content/static/*.gif", "content/static/*.jpeg"]
-    imgFiles.each do |filename|
+    img_files = Dir.glob ["theme/static/*.jpg", "theme/static/*.png", "theme/static/*.gif", "theme/static/*.jpeg", "content/static/*.jpg", "content/static/*.png", "content/static/*.gif", "content/static/*.jpeg"]
+    img_files.each do |filename|
       # create a new .png filename
-      outputFilename = "out/static/" + Path[filename].stem.to_s + ".png"
+      output_filename = "out/static/" + Path[filename].stem.to_s + ".png"
       # generate a didder command to fix images
-      command = "didder -i " + filename + " -o " + outputFilename + " --palette 'black gray white' --recolor '" + configfiledata["recolor"] + "' edm --serpentine FloydSteinberg"
+      command = "didder -i " + filename + " -o " + output_filename + " --palette 'black gray white' --recolor '" + configfiledata["recolor"] + "' edm --serpentine FloydSteinberg"
       # puts command
       system command
     end

@@ -1,0 +1,17 @@
+[dependencies]
+    packages = [
+        "crystal shards"
+    ]
+
+    binary_downloads = []
+
+[source]
+    dir = "."
+
+[build]
+    main = """
+shards build -p --threads=12
+    """
+    install = """
+cp bin/helix .vangaurd/install/
+    """

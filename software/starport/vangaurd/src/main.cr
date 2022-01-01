@@ -29,7 +29,7 @@ def install_deps(deps, final_out)
   # oh god types
   pkgs = deps["packages"].as_a
   pkgs.each do |package|
-    puts "sudo pacman -S #{package}"
+    system "sudo pacman -S #{package}"
   end
 
   bins = deps["binary_downloads"].as_a

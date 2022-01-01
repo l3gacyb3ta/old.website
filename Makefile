@@ -2,7 +2,7 @@ SHARDS_BIN ?= shards
 THREADS ?= --threads=12
 CRFLAGS ?= -p --production
 
-build-all: build-helix build-site
+build-all: build-helix build-vangaurd build-site
 	@echo "---- Built all"
 
 build-all-dev: build-helix-dev build-site
@@ -23,6 +23,12 @@ build-helix-dev:
 	mkdir -p bin
 	cd software/helix && THREADS=$(THREADS) make build
 	mv software/helix/bin/helix ./bin
+
+build-vangaurd:
+	@echo "---- Building vangaurd"
+	mkdir -p bin
+	cd software/starport/vangaurd && shards build $(THREADS)
+	mv software/starport/vangaurd/bin/vangaurd ~/.local/bin/vangaurd
 
 build-helix:
 	@echo "---- Building helix"
