@@ -1,4 +1,4 @@
-# helic
+# helix
 
 helix is a simple static site generator built in [crystal](https://crystal-lang.org). It is a fork of my old project [monis](https://github.com/l3gacyb3ta/monis).
 
