@@ -3,7 +3,7 @@
 */.obsidian
 site/out
 
-bin
+./bin
 **/bin
 
 **/lib
@@ -11,3 +11,4 @@ lib
 
 .vangaurd
 /software/starport/vangaurd/bin
+/bin
