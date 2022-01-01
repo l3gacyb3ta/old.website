@@ -15,7 +15,7 @@ body {
 
 main {
   margin: auto;
-  width: 60%;
+  width: 50%;
   background-color: var(--main-background-color);
 
   color: var(--text-color);
