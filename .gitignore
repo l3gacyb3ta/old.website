@@ -12,3 +12,5 @@ lib
 .vangaurd
 /software/starport/vangaurd/bin
 /bin
+
+*.bak

@@ -1,14 +1,13 @@
 ---
 title: "nebula - a home on the net"
 permalink: "/index"
+ai: "true"
 ---
-
 # Arcade Wise - A person who does stuff!
 ## Activism - Software - Being Queer
 ![Yours truly :3](static/me.png)  
 
 ---
-
 ## Projects!
 ### Mine:
 - [nebula](https://sr.ht/~arcade/nebula) : A _lightweight_ home on the net, from scratch!
@@ -18,3 +17,7 @@ permalink: "/index"
 ### Ones I've worked on:
 - [duckcoin](https://github.com/quackduck/duckcoin) : A toy cryptocurrency from scratch, written in go!
 
+## Writing!
+
+- [Zombie Programmers and Mr. Barthes](/zombieProgrammers.html) : Does the author of a piece of code die?
+- [Stickers - Random Thoughts](/rndm/stickers.html) : On why stickers are such a big thing.

@@ -14,7 +14,14 @@
     <body>
         <main>
             <div class="titlebar">
-                <h2>~/{{ builtin.path }}</h2>
+                <h2>
+                    <a href="/">
+                        ~/{{ builtin.path }}
+                    </a>
+                    {% if ai == 'true' %}
+                        <a class="ai" href="/AI.html">AI</a>
+                    {% endif %}
+                </h2>
             </div>
             <div class="content">
             {{ content | safe }}

@@ -6,6 +6,12 @@
   --main-background-color: #fff;
   --text-color: black;
   --code-color: #eee8d5;
+  scrollbar-color: var(--border-acent-color) var(--background-color)
+}
+
+::-webkit-scrollbar {
+  color: var(--border-acent-color);
+  background: var(--background-color);
 }
 
 body {
@@ -59,11 +65,18 @@ main pre {
   border: 2px solid var(--border-acent-color);
   box-shadow: 5px 5px 0px 0px var(--shadow-color);
   padding-top: 15px;
+  
 
-  width: 50%;
-  margin: 0 auto;
+  /* width: 50%;
+  margin: 0 auto; */
+  margin-left: 10px;
+  float: right;
   text-align: center;
   margin-bottom: 10px;
+}
+
+main h2 {
+  text-align: center;
 }
 
 .imgcontainer img {
@@ -72,16 +85,35 @@ main pre {
 }
 
 main .imgcontainer p {
-  color: #1F6161; /* a11y */
+  color: #1f6161; /* a11y */
 }
 
 .titlebar {
   padding: 0;
   padding-left: 10px;
+  padding-right: 10px;
+
   /* border on bottom */
   border-bottom: 2px solid var(--border-color);
   line-height: 80%;
   font-size: x-small;
+}
+
+.titlebar a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.titlebar h2 {
+  text-align: left;
+}
+
+.titlebar {
+  align-self: left;
+}
+
+.ai {
+  float: right;
 }
 
 .content {
@@ -96,9 +128,18 @@ main .imgcontainer p {
 
   .imgcontainer {
     width: 90%;
+    width: 50%;
+    margin-left: 0;
+    margin: 0 auto;
   }
 
-  body {
-    
+  :root {
+    scrollbar-width: 5px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .imgcontainer {
+    max-width: 25%;
   }
 }
