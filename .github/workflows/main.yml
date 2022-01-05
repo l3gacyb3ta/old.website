@@ -15,9 +15,12 @@ jobs:
           submodules: true  # Fetch Hugo themes (true OR recursive)
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
 
+      - name: Install crystal
+        run: curl -fsSL https://crystal-lang.org/install.sh | sudo bash
+
       - name: Setup 
         run: |
-          sudo apt-get install crystal shards libyaml
+          sudo apt-get install libyaml
           wget https://github.com/makeworld-the-better-one/didder/releases/download/v1.1.0/didder_1.1.0_linux_64-bit -O bin/didder
           export PATH="$PATH:$(pwd)/bin"
 
