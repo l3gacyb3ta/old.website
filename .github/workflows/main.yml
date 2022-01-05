@@ -27,7 +27,7 @@ jobs:
 
       - name: Build
         run: |
-          make
+          make build-site
 
 
       - name: Deploy
