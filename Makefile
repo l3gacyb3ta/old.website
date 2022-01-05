@@ -11,8 +11,8 @@ build-all-dev: build-helix-dev build-site
 build-site: build-content
 	@echo "---- Building site"
 	@sleep 1
-	rm -rf www
-	mv site/out www
+	rm -rf docs
+	mv site/out docs
 
 build-content: build-helix
 	@echo "---- Building content"
