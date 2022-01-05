@@ -6,7 +6,7 @@
   --main-background-color: #fff;
   --text-color: black;
   --code-color: #eee8d5;
-  scrollbar-color: var(--border-acent-color) var(--background-color)
+  scrollbar-color: var(--border-acent-color) var(--background-color);
 }
 
 ::-webkit-scrollbar {
@@ -28,11 +28,12 @@ main {
 
   border: 2px solid var(--border-color);
   padding: 0;
-  min-height: 90vh;
 
   box-shadow: 5px 5px 0px 0px var(--shadow-color);
 
   margin-bottom: 3rem;
+
+  position: relative;
 }
 
 main h1 {
@@ -41,8 +42,6 @@ main h1 {
 
 main {
   font-size: 115%;
-
-  position: relative;
 }
 
 main iframe {
@@ -74,7 +73,6 @@ main pre {
   border: 2px solid var(--border-acent-color);
   box-shadow: 5px 5px 0px 0px var(--shadow-color);
   padding-top: 15px;
-  
 
   /* width: 50%;
   margin: 0 auto; */
@@ -151,4 +149,17 @@ main .imgcontainer p {
   .imgcontainer {
     max-width: 25%;
   }
+}
+
+.main-iframe {
+  margin: auto;
+  width: 50%;
+  background-color: var(--main-background-color);
+  color: var(--text-color);
+  border: 2px solid var(--border-color);
+  padding: 0;
+  height: 100px;
+  box-shadow: 5px 5px 0px 0px var(--shadow-color);
+  margin-bottom: 3rem;
+  position: relative;
 }
