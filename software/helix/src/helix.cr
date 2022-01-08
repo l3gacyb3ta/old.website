@@ -35,7 +35,7 @@ module Helix
 
   if _init
     FileUtils.mkdir_p ["content", "theme", "theme/static", "static"]
-    File.write "theme/index.html.j2", "{{content}}"
+    File.write "theme/index.html", "{{content}}"
     # quit the program
     exit
   end
@@ -69,7 +69,7 @@ module Helix
   end
 
   content = "Nothing yet!"
-  template = env.get_template "index.html.j2"
+  template = env.get_template "index.html"
 
   # set up renderer
   options = Markd::Options.new
@@ -173,7 +173,7 @@ module Helix
     end
 
     # Static files that need no processing
-    staticFiles = Dir.glob ["static/*.txt", "theme/static/*.txt"]
+    staticFiles = Dir.glob ["static/*.txt", "theme/static/*.txt", "content/static/nomod/*"]
     staticFiles.each do |filename|
       spawn do # ayyyyee
         FileUtils.cp filename, "out/static/"

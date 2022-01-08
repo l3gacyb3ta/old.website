@@ -31,7 +31,7 @@ favicon: "/static/favicon.png"
 Hello and welcome!
 ```
 ```
-# theme/index.html.j2
+# theme/index.html
 <html>
     <head>
         <title>{{ title }}</title>
@@ -46,7 +46,7 @@ Hello and welcome!
 ## File structure for sites
 `/content`: Anything here gets rendered  
 `/static`: These files just get copied over to `/out/static`  
-`/theme`: Currently only `index.html.j2` gets used in this, but this is the Jinja2 template for the website.  
+`/theme`: Currently only `index.html` gets used in this, but this is the Jinja2 template for the website.  
 `/theme/static`: These are static files for a theme  
 `/out`: This is the output of the generator once it has been run !!DONT STORE ANYTHING IMPORTANT HERE IT GETS WIPED ON EACH RUN!!  
 `/config.yml`: Anything in here gets passed to the config attribute in the jinja template.
