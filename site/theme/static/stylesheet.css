@@ -119,29 +119,7 @@ main .imgcontainer p {
   padding: 0px 10px 10px 10px;
 }
 
-@media screen and (max-width: 800px) {
-  main {
-    width: 95%;
-    min-height: 95vh;
-  }
 
-  .imgcontainer {
-    width: 90%;
-    width: 50%;
-    margin-left: 0;
-    margin: 0 auto;
-  }
-
-  :root {
-    scrollbar-width: 5px;
-  }
-}
-
-@media screen and (min-width: 800px) {
-  .imgcontainer {
-    max-width: 25%;
-  }
-}
 
 .main-iframe {
   margin: auto;
@@ -168,4 +146,38 @@ main .imgcontainer p {
   margin-bottom: 1rem;
   margin-top: -2rem;
   position: relative;
+}
+
+@media screen and (max-width: 800px) {
+  main {
+    width: 95%;
+    min-height: 95vh;
+  }
+
+  .main-iframe {
+    width: 95%;
+  }
+
+  .widgets {
+    width: 95%;
+    height: calc(31 * 2);
+    max-height: calc(31*3);
+  }
+
+  .imgcontainer {
+    width: 90%;
+    width: 50%;
+    margin-left: 0;
+    margin: 0 auto;
+  }
+
+  :root {
+    scrollbar-width: 5px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .imgcontainer {
+    max-width: 25%;
+  }
 }
