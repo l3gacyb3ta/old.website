@@ -1,5 +1,5 @@
 ---
-title: "stickers"
+title: "Stickers - Random Thoughts"
 permalink: "/rndm/stickers"
 ---
 # Stickers - Random Thoughts

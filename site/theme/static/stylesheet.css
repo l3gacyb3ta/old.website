@@ -175,6 +175,29 @@ main .imgcontainer p {
   }
 }
 
+@media screen and (min-width: 800px) and (max-width: 1000px) {
+  main {
+    width: 80%;
+    min-height: 95vh;
+  }
+
+  .main-iframe {
+    width: 80%;
+  }
+
+  .widgets {
+    width: 80%;
+    max-height: calc(31*3);
+  }
+
+  .imgcontainer {
+    width: 80%;
+    width: 50%;
+    margin-left: 0;
+    margin: 0 auto;
+  }
+}
+
 @media screen and (min-width: 800px) {
   .widgets {
     max-height: 31px;
