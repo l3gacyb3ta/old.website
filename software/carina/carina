@@ -55,6 +55,10 @@ check() {
     cd $currentDir
 }
 
+edit() {
+    $EDITOR "~/projects/nebula/site/content/$1.md"
+}
+
 # Main CLI operation
 case $1 in 
     create)
@@ -66,7 +70,10 @@ case $1 in
     publish)
         publish
     ;;
+    edit)
+        edit $2
+    ;;
     *)
-        echo "Usage: carina (create | check | publish)"
+        echo "Usage: carina (create | check | publish | edit)"
     ;;
 esac
