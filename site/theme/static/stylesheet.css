@@ -141,7 +141,7 @@ main .imgcontainer p {
   color: var(--text-color);
   border: 2px solid var(--border-color);
   padding: 0;
-  max-height: 31px;
+  
   box-shadow: 5px 5px 0px 0px var(--shadow-color);
   margin-bottom: 1rem;
   margin-top: -2rem;
@@ -160,7 +160,6 @@ main .imgcontainer p {
 
   .widgets {
     width: 95%;
-    height: calc(31 * 2);
     max-height: calc(31*3);
   }
 
@@ -177,6 +176,10 @@ main .imgcontainer p {
 }
 
 @media screen and (min-width: 800px) {
+  .widgets {
+    max-height: 31px;
+  }
+
   .imgcontainer {
     max-width: 25%;
   }
