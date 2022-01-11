@@ -64,13 +64,14 @@ Here are some of the base protocols, technologies, and concepts:
 	A type of currenency where, hear me out this is gonna get ~ economical ~,
 	the value is derived from the decentralized trust model. That's a #bigbrain
 	way to say that people think it has value because math and "no one owns it".
-	(We'll get into that later ;3)
+	
 - NFTs:
 	These are a great idea, in theory. NFTs are basically (for the most part), a
 	reciept that points to a piece of art you own. Interestingly, in a lot of 
 	casses you dont own the art. The good part of them is that a cut of every
 	sale goes back to the artist. On the flip side of that, a lot of major NFTs
 	aren't made by actual artists, and are just brands looking for a quick buck.
+
 - Handshake and ENS:
 	These are two seperate DNS services for the decentralized web, ignoring that
 	projects like [OpenNIC](https://opennic.org) exist and don't burn the
@@ -78,6 +79,7 @@ Here are some of the base protocols, technologies, and concepts:
 	called "smart contracts" on the [Ethereum](https://ethereum.org) blockchain.
 	Both of these are Proof Of Work, which is a system that relies on solving 
 	complex math problems, burning gigawatts of power a day. 
+
 - IPFS 
 	This is one of the few pieces of the web3 stack I am genuinely a fan of.
 	[IPFS](https://ipfs.io) is a p2p (fancyspeak for 2 computers connecting to 
@@ -104,4 +106,9 @@ Degrowth. With our current situation, quite a few people belive that the
 solution to our issues with some things like climate change and the hell that is
 work in our neoliberal economy. The core concept is moving backwards, slowing
 down, and reversing. We can apply this to web3 aswell! We need to stop pushing
-forwards on things like PoW cryptocurrencies and move back to Web 2 or 1 tech
+forwards on things like PoW cryptocurrencies and move back to Web 2 or 1 tech.
+
+## What can I do?
+I have no clue how to end posts, so enjoy this amazing call to action:
+> Just go and like, ya know, steal some bitcoin mining GPUs and use them for 
+> games.
