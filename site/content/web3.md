@@ -22,8 +22,12 @@ so what were those?
 Most people consider the internet to have been invented in 1983, as that is the
 year that the standard of TCP/IP (Transfer Control Protocol/Internetwork
 Protocol) was formalized, creating a standard way of sending data from computer
-to computer. Web 1 was characterized by static, informative content.
+to computer, but that wouldn't be the begining of the web.
 
+Web 1 starts with Tim Berners-Lee. In 1989 he created HTTP (Hyper Text Transport
+Protocol), a method of sending documents over the IP stack that we still use
+today! Because of the rudimentary nature of this protocol, Web 1 was 
+characterized by static, informative content.
 Now why would people build such a boring internet? Well, they were academics,
 sooooo.
 
@@ -40,7 +44,7 @@ of content.
 Web 3.0 was originally considered to be the "semantic web," that is, an internet 
 where the content itself is machine parseable and easily contextulized. That's a
 whole bunch of buzzwords for basically "look at this data, this data is
-related!" The idea was created by the _creator of HTTP himself_ 
+related!" The idea was created by the _the guy we talked about earlier_ 
 [Tim Berners-Lee](https://www.w3.org/People/Berners-Lee/), an idea I love, and
 if you do too, then look into the IndieWeb!
 
