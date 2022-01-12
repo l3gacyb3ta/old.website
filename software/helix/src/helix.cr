@@ -63,6 +63,7 @@ module Helix
     data.as_h.each do |item|
       configfiledata[item[0].as_s] = item[1].as_s
     end
+
   else
     STDERR.puts "No config.yml detected in the current directory!"
     exit 1
@@ -145,6 +146,11 @@ module Helix
       FileUtils.mkdir_p "out/static"
     end
 
+    if configfiledata.has_key? "CNAME"
+      File.write("out/CNAME", configfiledata["CNAME"])
+      puts "Wrote CNAME."
+    end
+
     # css minification
     css_files = Dir.glob "theme/static/*.css"
     css_files.each do |filename|
@@ -173,8 +179,8 @@ module Helix
     end
 
     # Static files that need no processing
-    staticFiles = Dir.glob ["static/*.txt", "theme/static/*.txt", "content/static/nomod/*"]
-    staticFiles.each do |filename|
+    static_files = Dir.glob ["static/*.txt", "theme/static/*.txt", "content/static/nomod/*"]
+    static_files.each do |filename|
       spawn do # ayyyyee
         FileUtils.cp filename, "out/static/"
       end
