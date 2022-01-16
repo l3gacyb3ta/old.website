@@ -7,7 +7,7 @@ require "crinja"
 require "markd"
 require "yaml"
 
-# The main monis engine
+# The main helix engine
 module Helix
   VERSION = "0.6.0"
 
@@ -63,7 +63,6 @@ module Helix
     data.as_h.each do |item|
       configfiledata[item[0].as_s] = item[1].as_s
     end
-
   else
     STDERR.puts "No config.yml detected in the current directory!"
     exit 1
