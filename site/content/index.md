@@ -19,5 +19,6 @@ ai: "true"
 
 ## Writing!
 - [My (not so) first thoughts on Web 3](/web3.html) : web3 and its horrors.
+- [Hedonism](/hedonism.html) : Hedonism and why it rocks.
 - [Zombie Programmers and Mr. Barthes](/zombieProgrammers.html) : Does the author of a piece of code die?
 - [Stickers - Random Thoughts](/rndm/stickers.html) : On why stickers are such a big thing.
