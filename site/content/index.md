@@ -35,7 +35,11 @@ musicframe: "true"
 - [Stickers - Random Thoughts](/rndm/stickers.html) : On why stickers are such a big thing.
 
 ---
-## I'm listening to:
+  
+  
+
+
+
 
 <div class="main-music" id="music">
       <img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Youtube_loading_symbol_1_(wobbly).gif" alt="playlist" class="playlist" id="playlist" />
