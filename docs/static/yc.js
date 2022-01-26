@@ -27,5 +27,7 @@ const getData = () => {
 
 getData();
 
-// run getData every 10 seconds
-setInterval(getData, 1000);
+if (!navigator.connection.saveData) { // Make sure we're not on a metered connection
+  // run getData every 30 seconds
+  setInterval(getData, 30000);
+}

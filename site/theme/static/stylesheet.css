@@ -137,6 +137,36 @@ main .imgcontainer p {
   position: relative;
 }
 
+.main-music {
+  min-height: 100px;
+  overflow-wrap: break-word;
+}
+.music img {
+  max-height: 100px;
+}
+
+.playlist {
+  max-height: 100px;
+  float: right;
+}
+
+#right {
+  float: left;
+  max-width: 80%;
+  overflow-wrap: break-word;
+  margin-left: 0.5rem;
+  margin-bottom: 0.2rem;
+}
+
+#right h2 {
+  font-size: x-large;
+}
+
+#right h3 {
+  font-size: larger;
+  color: gray;
+}
+
 .widgets {
   margin: auto;
   width: 50%;
@@ -151,41 +181,37 @@ main .imgcontainer p {
   position: relative;
 }
 
-.music img {
-  max-height: 100px;
-}
-
-.playlist {
-  max-height: 100px;
-  float: right;
-}
-
-#right {
-  float: left;
-  margin-left: 0.5rem;
-  margin-bottom: 0.2rem;
-}
-
-#right h2 {
-  font-size: x-large;
-}
-
-#right h3 {
-  font-size: larger;
-  color: gray;
-}
-
 @media screen and (max-width: 800px) {
   main {
     width: 95%;
     min-height: 95vh;
   }
+  
+  .playlist {
+    float: none;
+    width: 30vh;
+    min-height: 30vh;
+    /* align the image in the center */
+    margin: auto;
+  }
+
+  #right {
+    float: none;
+  }
+
+  /* .main-music {
+    visibility: hidden !important;
+  } */
 
   .main-iframe {
+    /* visibility: hidden !important; */
+
     width: 95%;
   }
 
   .widgets {
+    /* visibility: hidden !important; */
+
     width: 95%;
     max-height: calc(31 * 3);
   }

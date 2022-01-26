@@ -40,7 +40,6 @@
       </div>
       <div class="content">{{ content | safe }}</div>
     </main>
-
     <div class="widgets">
       <img src="/static/pan_bev.png" />
       <img src="/static/trans_bev.png" />
@@ -52,9 +51,7 @@
       <img src="/static/linux-p.gif" />
       <img src="/static/pensquid.gif" />
     </div>
-
     {% if builtin.path == 'index.md' %}
-
     <div class="main-iframe">
       <iframe
         src="https://overengineering.kognise.dev/embed/arcade"
@@ -63,16 +60,6 @@
         style="user-select: none"
         frameborder="0"
       />
-    </div>
-
-    <div class="main-iframe" id="music">
-      <img src="" alt="playlist" class="playlist" id="playlist" />
-      <div id="right">
-        <h2 id="title"></h2>
-        <h3 id="artist"></h3>
-      </div>
-
-      <script src="/yc.js"></script>
     </div>
     {% endif %} {% if code == 'true' %}
     <script src="/static/highlight.min.js"></script>
