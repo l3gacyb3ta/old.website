@@ -22,7 +22,6 @@ Twitter: <a href ="https://twitter.com/l3gacyb3ta" rel="me">@l3gacyb3ta</a>
 GH: <a href="https://github.com/l3gacyb3ta" rel="me">l3gacyb3ta</a>  
 sourcehut: <a href="https://sr.ht/~arcade" rel="me">~arcade</a>
 
-<link rel="me">
 ---
 
 ## Projects!
