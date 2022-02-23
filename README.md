@@ -1,6 +1,6 @@
 # nebula - A digital garden for the ages
 
-This is a from-scratch rewrite of my site currently at [raleighwi.se](https://raleighwi.se), tough that domain will be gone as soon as it expires.
+This is a from-scratch rewrite of my site currently at [arcadewise.me](https://arcadewise.me).
 
 ## File layout
 
