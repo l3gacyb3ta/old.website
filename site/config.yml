@@ -3,3 +3,4 @@ stylesheet: "stylesheet.css"
 # black gray white
 recolor: "#002b36 #839496 #fdf6e3"
 CNAME: "arcadewise.me"
+author: "Arcade Wise"
