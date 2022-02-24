@@ -18,6 +18,17 @@ This is a from-scratch rewrite of my site currently at [arcadewise.me](https://a
 - `./software/` : All of the software used in nebula
 	- `carina/` : Tools for content creation
 		- `carina` : A script to automate creation of files and publishing
+	- `cygnusloop/` : A comments system for my site
+		- `src/` : The cygnus loop source
+			- `web/` : Content that will be published
+				- `templates/` : Jinja templates for cygnus loop
+				- `static/` : Cygnus loop static content
+			- `__init__.py` : Pulls everything together
+			- `comments.py` : Holds the comments access functions
+			- `db.py` : Handles interaction with the SQLite database
+			- `new.py` : Content creation and submission routes
+			- `view.py` : View route
+		- `pypoetry.toml` : Config for poetry (hah suck it pip)
 	- `helix/` : The static site that is in the center of this whole endeavour
 		- `src/` : Source code for helix
 		- `lib/` : The code for the dependencies of helix

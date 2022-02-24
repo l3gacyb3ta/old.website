@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <h2>New comment</h2>
+
+    <form method="post" action="/submit/{{ postid }}">
+      <hr>
+
+      <div class="line">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" /><br />
+      </div>
+
+      <hr>
+
+      <div class="line">
+        <label for="name">Website (leave blank if none):</label>
+        <input type="text" id="website" name="website" /><br />
+      </div>
+
+      <hr>
+
+      <div class="line">
+        <label for="comment">Comment:</label><br />
+        <textarea
+          id="comment"
+          name="comment"
+          style="width: 100%; height: 50%; border-style: solid"
+        >
+        </textarea>
+      </div>
+
+
+      <input class="left" type="submit" value="Submit" />
+    </form>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+.comment {
+  margin-bottom: 10px;
+  padding: 5px;
+  border-style: solid;
+}
+textarea {
+  float: right;
+  margin-bottom: 5px;
+}
+input {
+  float: right;
+  width: 50%;
+}
+.line {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.left {
+  float: left;
+}
+hr {
+  background-color: gray;
+  border: none;
+  height: 1px;
+}

@@ -1,4 +1,4 @@
-# Starport 
+# starport 
 
 Starport is the build system for nebula. Ready to bring my content to the galaxy!
 
