@@ -19,6 +19,7 @@ musicframe: "true"
 Name: Arcade Wise  
 Email: <a href="mailto:l3gacy.b3ta@gmail.com" rel="me">l3gacy.b3ta@gmail.com</a>  
 Twitter: <a href ="https://twitter.com/l3gacyb3ta" rel="me">@l3gacyb3ta</a>  
+CounterSocial: <a rel="me" href="https://counter.social/@arcade">@arcade@counter.social</a>  
 GH: <a href="https://github.com/l3gacyb3ta" rel="me">l3gacyb3ta</a>  
 sourcehut: <a href="https://sr.ht/~arcade" rel="me">~arcade</a>
 
