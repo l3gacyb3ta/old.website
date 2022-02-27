@@ -12,7 +12,10 @@
       rel="webmention"
       href="https://webmention.io/{{ config.CNAME }}/webmention"
     />
-    <link rel="pingback" href="https://webmention.io/{{ config.CNAME }}/xmlrpc" />
+    <link
+      rel="pingback"
+      href="https://webmention.io/{{ config.CNAME }}/xmlrpc"
+    />
 
     {% if code == 'true' %}
     <link rel="stylesheet" href="/static/default.min.css" />
@@ -37,6 +40,7 @@
   </head>
   <body>
     <main class="h-entry">
+      <!-- -------------------------------------------------------- titlebar ------------------------------------------------------ -->
       <div class="titlebar">
         <h2>
           <a href="/" class="p-name"> ~/{{ builtin.path }} </a>
@@ -45,15 +49,23 @@
           {% endif %}
         </h2>
       </div>
+      <!-- -------------------------------------------------------- content ------------------------------------------------------ -->
       <div class="content e-content">{{ content | safe }}</div>
-      <br />
       <hr />
-      An
-      <a class="p-author h-card" href="https://{{ config.CNAME }}"
-        >{{ config.author }}</a
-      >
-      production.
+      {% if comments == "true" %}
+      <!-- -------------------------------------------------------- comments ------------------------------------------------------ -->
+      <div class="comments">
+        <iframe
+          src="{{ config.comments }}/view/{{ postid }}"
+          width="100%"
+          frameborder="0"
+        >
+          Uh oh, comments should be here.
+        </iframe>
+      </div>
+      {% endif %}
     </main>
+    <!-- -------------------------------------------------------- widgets ------------------------------------------------------ -->
     <div class="widgets">
       <img src="/static/pan_bev.png" />
       <img src="/static/trans_bev.png" />
@@ -65,7 +77,9 @@
       <img src="/static/linux-p.gif" />
       <img src="/static/pensquid.gif" />
     </div>
+
     {% if builtin.path == 'index.md' %}
+    <!-- -------------------------------------------------------- iframe ------------------------------------------------------ -->
     <div class="main-iframe">
       <iframe
         src="https://overengineering.kognise.dev/embed/arcade"

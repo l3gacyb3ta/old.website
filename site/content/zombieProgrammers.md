@@ -1,6 +1,8 @@
 ---
 title: "Zombie Programmers and Mr. Barthes"
 permalink: "/zombieProgrammers"
+comments: "true"
+postid: "zombie"
 ---
 # Zombie Programmers and Mr. Barthes
 

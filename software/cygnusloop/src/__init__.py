@@ -2,8 +2,6 @@ from flask import (
     Flask
 )
 from .db import get_db
-from timeago import format as time_since
-from datetime import datetime
 import os
 
 def create_app():
@@ -33,8 +31,3 @@ def create_app():
     return app
 
 app = create_app()
-
-@app.template_filter("since")
-def since(text):
-    """Convert a string to all caps."""
-    return time_since(text, datetime.utcnow())

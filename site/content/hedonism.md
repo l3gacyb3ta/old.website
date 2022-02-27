@@ -1,6 +1,8 @@
 ---
 title: "hedonism"
 permalink: "/hedonism"
+comments: "true"
+postid: "hedonism"
 ---
 # Hedonism
 Hedonism gets a bad rep. But it's my personal philosophy. I think I summarized it really well in this little passage:  

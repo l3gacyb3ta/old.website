@@ -1,6 +1,8 @@
 ---
 title: "My (not so first) first thoughts on web3"
 permalink: "/web3"
+comments: "true"
+postid: "web3"
 ---
 My (not so) first thoughts on web3
 ==================================
