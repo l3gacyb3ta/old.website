@@ -72,7 +72,7 @@ module Helix
   template = env.get_template "index.html"
 
   # set up rss feed
-  feed = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><channel><link>https://#{configfiledata["CNAME"]}</link><description>#{configfiledata["desc"]}</description>"
+  feed = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<rss version=\"2.0\">\n<channel>\n<link>https://#{configfiledata["CNAME"]}</link>\n<description>#{configfiledata["desc"]}</description>\n"
 
   # set up renderer
   options = Markd::Options.new
@@ -97,7 +97,7 @@ module Helix
           # p! configdata
         end
 
-        feed += "<item><title>#{data["title"].as_s}</title><link>https://#{configfiledata["CNAME"]}/#{permalink}</link></item>\n"
+        feed += "<item>\n\t<title>#{data["title"].as_s}</title>\n\t<link>https://#{configfiledata["CNAME"]}/#{permalink}</link>\n</item>\n"
 
 
         # Do something with the front matter and content.

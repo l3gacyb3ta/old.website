@@ -1,8 +1,34 @@
-<?xml version="1.0" encoding="UTF-8"?><channel><link>https://arcadewise.me</link><description>Arcade's digital home</description><item><title>Stickers - Random Thoughts</title><link>https://arcadewise.me//rndm/stickers</link></item>
-<item><title>Dithering - rndm</title><link>https://arcadewise.me//rndm/dithering</link></item>
-<item><title>My (not so first) first thoughts on web3</title><link>https://arcadewise.me//web3</link></item>
-<item><title>hedonism</title><link>https://arcadewise.me//hedonism</link></item>
-<item><title>nebula - a home on the net</title><link>https://arcadewise.me//index</link></item>
-<item><title>Zombie Programmers and Mr. Barthes</title><link>https://arcadewise.me//zombieProgrammers</link></item>
-<item><title>nebula - ai disclousure</title><link>https://arcadewise.me//AI</link></item>
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+<link>https://arcadewise.me</link>
+<description>Arcade's digital home</description>
+<item>
+	<title>Stickers - Random Thoughts</title>
+	<link>https://arcadewise.me//rndm/stickers</link>
+</item>
+<item>
+	<title>Dithering - rndm</title>
+	<link>https://arcadewise.me//rndm/dithering</link>
+</item>
+<item>
+	<title>My (not so first) first thoughts on web3</title>
+	<link>https://arcadewise.me//web3</link>
+</item>
+<item>
+	<title>hedonism</title>
+	<link>https://arcadewise.me//hedonism</link>
+</item>
+<item>
+	<title>nebula - a home on the net</title>
+	<link>https://arcadewise.me//index</link>
+</item>
+<item>
+	<title>Zombie Programmers and Mr. Barthes</title>
+	<link>https://arcadewise.me//zombieProgrammers</link>
+</item>
+<item>
+	<title>nebula - ai disclousure</title>
+	<link>https://arcadewise.me//AI</link>
+</item>
 </channel></rss>
