@@ -71,12 +71,14 @@ module Helix
   content = "Nothing yet!"
   template = env.get_template "index.html"
 
+  # set up rss feed
+  feed = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><channel><link>https://#{configfiledata["CNAME"]}</link><description>#{configfiledata["desc"]}</description>"
+
   # set up renderer
   options = Markd::Options.new
 
-  files.each do |filename|
-    spawn do # Do this conncurently with other files! Performance!
-      puts "Generating HTML for " + filename
+  files.each do |filename| # Do this conncurently with other files! Performance!
+      puts "Generating HTML+RSS for " + filename
 
       FrontMatter.open(filename) { |front_matter, content_io|
         data = YAML.parse front_matter
@@ -94,6 +96,9 @@ module Helix
           frontdata[item[0].as_s] = item[1].as_s
           # p! configdata
         end
+
+        feed += "<item><title>#{data["title"].as_s}</title><link>https://#{configfiledata["CNAME"]}/#{permalink}</link></item>\n"
+
 
         # Do something with the front matter and content.
         # Parse the front matter as YAML, JSON or something else?
@@ -133,10 +138,14 @@ module Helix
         end
         puts "Generated " + permalink + ".html"
       }
-    end
+    
   end
 
-  puts "HTML Generation finished!"
+  feed += "</channel></rss>"
+  File.write "out/" + configfiledata["rss"], feed
+
+  puts "HTML+RSS Generation finished!"
+
 
   puts "Tranfering static content"
   if Dir.exists? "theme/static"
