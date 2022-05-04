@@ -1,6 +1,7 @@
 SHARDS_BIN ?= shards
-THREADS ?= --threads=12
-CRFLAGS ?= -p --production
+THREADS ?= --threads=8
+CRFLAGS ?= -p --production --link-flags -L/usr/lib 
+
 
 build-all: build-helix build-vangaurd build-site
 	@echo "---- Built all"
@@ -27,7 +28,7 @@ build-helix-dev:
 build-vangaurd:
 	@echo "---- Building vangaurd"
 	mkdir -p bin
-	cd software/starport/vangaurd && shards build $(THREADS)
+	cd software/starport/vangaurd && shards build $(THREADS) --link-flags -L/usr/lib
 	mv software/starport/vangaurd/bin/vangaurd ~/.local/bin/vangaurd
 
 build-helix:

@@ -19,7 +19,7 @@ musicframe: "true"
 Name: Arcade Wise  
 Email: <a href="mailto:l3gacy.b3ta@gmail.com" rel="me">l3gacy.b3ta@gmail.com</a>  
 Twitter: <a href ="https://twitter.com/l3gacyb3ta" rel="me">@l3gacyb3ta</a>  
-CounterSocial: <a rel="me" href="https://counter.social/@arcade">@arcade@counter.social</a>  
+Fediverse: <a rel="me" href="https://catcatnya.com/@arcade">@arcade@catcatnya.com</a>  
 GH: <a href="https://github.com/l3gacyb3ta" rel="me">l3gacyb3ta</a>  
 sourcehut: <a href="https://sr.ht/~arcade" rel="me">~arcade</a>
 
@@ -47,14 +47,9 @@ sourcehut: <a href="https://sr.ht/~arcade" rel="me">~arcade</a>
 
 (if you want to hear about new stuff, here's an [rss feed](/feed.rss)!)
 ---
-  
-  
-
-
-
 
 <div class="main-music" id="music">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Youtube_loading_symbol_1_(wobbly).gif" alt="playlist" class="playlist" id="playlist" />
+      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Youtube_loading_symbol_1_(wobbly).gif" alt="playlist cover for my music" class="playlist" id="playlist" />
       <div id="right">
         <h2 id="title">What Am I Listening To?</h2>
         <h3 id="artist">Loading...</h3>

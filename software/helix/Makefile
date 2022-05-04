@@ -2,11 +2,12 @@ CRYSTAL_BIN ?= crystal
 SHARDS_BIN ?= shards
 PREFIX ?= /usr/local
 SHARD_BIN ?= ../../bin
-THREADS ?= --threads=12
-CRFLAGS ?= -p --production
+THREADS ?= --threads=8
+CRFLAGS ?= -p --production --link-flags -L/usr/lib
+
 
 build: clean
-	$(SHARDS_BIN) build $(CRFLAGS) $(THREADS)
+	$(SHARDS_BIN) build --link-flags -L/usr/lib $(CRFLAGS) $(THREADS)
 
 clean:
 	rm -rf bin

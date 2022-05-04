@@ -4,14 +4,6 @@ shards:
     git: https://github.com/straight-shoota/crinja.git
     version: 0.8.0
 
-  duktape:
-    git: https://github.com/jessedoyle/duktape.cr.git
-    version: 1.0.0
-
-  html-minifier:
-    git: https://github.com/sam0x17/html-minifier.git
-    version: 0.1.0+git.commit.3913bbf8845ddb2030cbd799f7aa8a40a014c7d2
-
   markd:
     git: https://github.com/icyleaf/markd.git
     version: 0.4.2
