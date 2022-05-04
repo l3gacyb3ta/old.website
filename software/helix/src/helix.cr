@@ -159,12 +159,12 @@ module Helix
     end
 
     # css minification
-    # css_files = Dir.glob "theme/static/*.css"
-    # css_files.each do |filename|
-    #   spawn do
-    #     File.write "out/static/" + Path[filename].basename, HtmlMinifier.minify!(File.read(filename))
-    #   end
-    # end
+    css_files = Dir.glob "theme/static/*.css"
+    css_files.each do |filename|
+      spawn do
+        File.write "out/static/" + Path[filename].basename, File.read(filename)
+      end
+    end
 
     # JavaScript owo
     js_files = Dir.glob "theme/static/*.js"
