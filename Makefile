@@ -3,10 +3,10 @@ THREADS ?= --threads=8
 CRFLAGS ?= -p --production --link-flags -L/usr/lib 
 
 
-build-all: build-helix build-vangaurd build-site
+build-all: ./bin/helix build-vangaurd build-site
 	@echo "---- Built all"
 
-build-all-dev: build-helix-dev build-site
+build-all-dev: ./bin/helix-dev build-site
 	@echo "---- Built all-dev"
 
 build-site: build-content
@@ -15,11 +15,11 @@ build-site: build-content
 	rm -rf docs
 	mv site/out docs
 
-build-content: build-helix
+build-content: ./bin/helix
 	@echo "---- Building content"
 	cd site && ../bin/helix
 
-build-helix-dev:
+./bin/helix-dev:
 	@echo "---- Building helix"
 	mkdir -p bin
 	cd software/helix && THREADS=$(THREADS) make build
@@ -31,7 +31,7 @@ build-vangaurd:
 	cd software/starport/vangaurd && shards build $(THREADS) --link-flags -L/usr/lib
 	mv software/starport/vangaurd/bin/vangaurd ~/.local/bin/vangaurd
 
-build-helix:
+./bin/helix:
 	@echo "---- Building helix"
 	mkdir -p bin
 	CRFLAGS="--pproduction" cd software/helix && CRFLAGS="--production" make build

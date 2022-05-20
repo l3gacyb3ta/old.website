@@ -18,7 +18,6 @@ musicframe: "true"
 
 Name: Arcade Wise  
 Email: <a href="mailto:l3gacy.b3ta@gmail.com" rel="me">l3gacy.b3ta@gmail.com</a>  
-Twitter: <a href ="https://twitter.com/l3gacyb3ta" rel="me">@l3gacyb3ta</a>  
 Fediverse: <a rel="me" href="https://catcatnya.com/@arcade">@arcade@catcatnya.com</a>  
 GH: <a href="https://github.com/l3gacyb3ta" rel="me">l3gacyb3ta</a>  
 sourcehut: <a href="https://sr.ht/~arcade" rel="me">~arcade</a>
@@ -34,10 +33,6 @@ sourcehut: <a href="https://sr.ht/~arcade" rel="me">~arcade</a>
 - [corgi](https://github.com/l3gacyb3ta/corgi) : Python CLI tool for the amazing file host [doggo.ninja](https://doggo.ninja/).
 - [xt](https://github.com/l3gacyb3ta/xt) : A set of extension functions for the fish shell.
 
-### Ones I've worked on:
-
-- [duckcoin](https://github.com/quackduck/duckcoin) : A toy cryptocurrency from scratch, written in go!
-
 ## Writing!
 
 - [My (not so) first thoughts on Web 3](/web3.html) : web3 and its horrors.
@@ -46,6 +41,11 @@ sourcehut: <a href="https://sr.ht/~arcade" rel="me">~arcade</a>
 - [Stickers - Random Thoughts](/rndm/stickers.html) : On why stickers are such a big thing.
 
 (if you want to hear about new stuff, here's an [rss feed](/feed.rss)!)
+
+## Clubs!
+
+- [miniclub](https://forever.amongtech.cc/miniclub)
+
 ---
 
 <div class="main-music" id="music">

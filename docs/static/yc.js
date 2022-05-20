@@ -1,24 +1,19 @@
-// Thanks a lot Aria! https://tacohitbox.com!
-
-const title = document.getElementById("title");
-const artist = document.getElementById("artist");
-const playlist = document.getElementById("playlist");
+// Thanks a lot Aria <3! https://tacohitbox.com!
 
 const getData = () => {
   fetch("https://yc.tacohitbox.com/api/last/l3gacyb3ta").then((response) => {
     response.json().then((data) => {
-      const track = data.response.track;
-      const cover = data.response.cover;
-
-      title.innerHTML = track.name;
-      artist.innerHTML =
+      document.getElementById("title").innerHTML = data.response.track.name;
+      document.getElementById("artist").innerHTML =
         data.response.artist.name +
         " - " +
         (data.response["est-timestamp"] == "live"
           ? "listening now"
           : data.response["est-timestamp"]);
 
-      playlist.setAttribute("src", cover);
+      document
+        .getElementById("playlist")
+        .setAttribute("src", data.response.cover);
 
       return;
     });
@@ -27,7 +22,8 @@ const getData = () => {
 
 getData();
 
-if (!navigator.connection.saveData) { // Make sure we're not on a metered connection
+if (!navigator.connection.saveData) {
+  // Make sure we're not on a metered connection
   // run getData every 30 seconds
   setInterval(getData, 30000);
 }
