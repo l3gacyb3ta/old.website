@@ -45,7 +45,9 @@ sourcehut: <a href="https://sr.ht/~arcade" rel="me">~arcade</a>
 ## Clubs!
 
 - [miniclub](https://forever.amongtech.cc/miniclub)
-
+    - [previous](https://miniclub.amongtech.cc/next/arcadewise.me)
+    - [random](https://miniclub.amongtech.cc/random)
+    - [next](https://miniclub.amongtech.cc/next/arcadewise.me)
 ---
 
 <div class="main-music" id="music">
