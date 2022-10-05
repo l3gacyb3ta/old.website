@@ -186,7 +186,7 @@ module Helix
     end
 
     # Static files that need no processing
-    static_files = Dir.glob ["static/*.txt", "theme/static/*.txt", "content/static/nomod/*"]
+    static_files = Dir.glob ["static/*.txt", "theme/static/*.txt", "content/static/nomod/*", "content/static/*.css"]
     static_files.each do |filename|
       spawn do # ayyyyee
         FileUtils.cp filename, "out/static/"

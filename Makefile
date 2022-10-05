@@ -2,6 +2,7 @@ SHARDS_BIN ?= shards
 THREADS ?= --threads=8
 CRFLAGS ?= -p --production --link-flags -L/usr/lib 
 
+.PHONY: clean clean-helix clean-helix-content clean-helix-site build-all build-all-dev build-site build-content build-vangaurd install-deps-linux install-deps-non-root
 
 build-all: ./bin/helix build-vangaurd build-site
 	@echo "---- Built all"
@@ -30,6 +31,17 @@ build-vangaurd:
 	mkdir -p bin
 	cd software/starport/vangaurd && shards build $(THREADS) --link-flags -L/usr/lib
 	mv software/starport/vangaurd/bin/vangaurd ~/.local/bin/vangaurd
+
+
+clean:
+	rm ./bin/*
+	rm -rf docs
+
+clean-helix: clean ./bin/helix
+
+clean-helix-content: clean-helix build-content
+
+clean-helix-site: clean-helix build-site
 
 ./bin/helix:
 	@echo "---- Building helix"

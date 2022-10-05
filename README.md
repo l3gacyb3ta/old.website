@@ -44,6 +44,7 @@ This is a from-scratch rewrite of my site currently at [arcadewise.me](https://a
 - `./www/` : What gets servered
 
 ### Files in root
+
 - `Makefile` : run make to build all components from source
 - `Caddyfile` : Caddy configuration, to be moved to starship
 - `todo.md` : An Up-To-Date-ish todo list.
@@ -51,7 +52,9 @@ This is a from-scratch rewrite of my site currently at [arcadewise.me](https://a
 Keep in mind, 95% of these locations have a README, so READTHEM.
 
 ## Design
+
 The philosphy and insipiration are in [`design/ideas`](core.md) and there are some krita scribbles in the `design` folder as well. [`design/technical`](design/technical) follows the technical side of the project, with the software (I will be writing my own static site generator!) and webdev stuff going there, and [`design/art`](design/art) will follow the artistic side of site design. If I ever get this running on hardware I own I'll make a page for that aswell.
 
 ## Licensing
-The raw code for this site sits under an Unlicense, and the content (anything other than raw source code, so art, text, music, etc.) is under a CC BY-SA 4.0 license.
+
+The raw code for this site sits under the Nonviolent Public License, and the content (anything other than raw source code, so art, text, music, etc.) is under a CC BY-SA 4.0 license.
