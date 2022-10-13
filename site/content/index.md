@@ -17,8 +17,10 @@ musicframe: "true"
 ## [h-card](https://indieweb.org/h-card)  
 
 Name: Arcade Wise  
-Email: <a href="mailto:l3gacy.b3ta@gmail.com" rel="me">l3gacy.b3ta@gmail.com</a>  
-Fediverse: <a rel="me" href="https://catcatnya.com/@arcade">@arcade@catcatnya.com</a>  
+Email:
+<a href="mailto:l3gacy.b3ta@gmail.com" rel="me">l3gacy.b3ta@gmail.com</a>  
+Fediverse:
+<a rel="me" href="https://catcatnya.com/@arcade">@arcade@catcatnya.com</a>  
 GH: <a href="https://github.com/l3gacyb3ta" rel="me">l3gacyb3ta</a>  
 sourcehut: <a href="https://sr.ht/~arcade" rel="me">~arcade</a>
 
@@ -28,10 +30,15 @@ sourcehut: <a href="https://sr.ht/~arcade" rel="me">~arcade</a>
 
 ### Mine:
 
-- [nebula](https://sr.ht/~arcade/nebula) : A _lightweight_ home on the net, from scratch!
-- [dialect](https://github.com/l3gacyb3ta/dialect) : A programming language that compiles to JavaScript, with modern syntax and cool language features. Even has an online playground!
-- [corgi](https://github.com/l3gacyb3ta/corgi) : Python CLI tool for the amazing file host [doggo.ninja](https://doggo.ninja/).
-- [xt](https://github.com/l3gacyb3ta/xt) : A set of extension functions for the fish shell.
+- [nebula](https://sr.ht/~arcade/nebula) : A _lightweight_ home on the net, from
+  scratch!
+- [dialect](https://github.com/l3gacyb3ta/dialect) : A programming language that
+  compiles to JavaScript, with modern syntax and cool language features. Even 
+  has an online playground!
+- [corgi](https://github.com/l3gacyb3ta/corgi) : Python CLI tool for the amazing
+  file host [doggo.ninja](https://doggo.ninja/).
+- [xt](https://github.com/l3gacyb3ta/xt) : A set of extension functions for the
+  fish shell.
 
 ## Writing!
 
@@ -45,9 +52,10 @@ sourcehut: <a href="https://sr.ht/~arcade" rel="me">~arcade</a>
 ## Clubs!
 
 - [miniclub](https://forever.amongtech.cc/miniclub)
-    - [previous](https://miniclub.amongtech.cc/prev/arcadewise.me)
-    - [random](https://miniclub.amongtech.cc/random)
-    - [next](https://miniclub.amongtech.cc/next/arcadewise.me)
+  - [previous](https://miniclub.amongtech.cc/prev/arcadewise.me)
+  - [random](https://miniclub.amongtech.cc/random)
+  - [next](https://miniclub.amongtech.cc/next/arcadewise.me)
+
 ---
 
 <div class="main-music" id="music">
