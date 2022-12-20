@@ -11,6 +11,8 @@ dependencies:
     github: icyleaf/markd
   crinja:
     github: straight-shoota/crinja
+  crest:
+    github: mamantoha/crest
 
 
 targets:

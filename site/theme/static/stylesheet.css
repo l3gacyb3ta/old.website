@@ -183,6 +183,31 @@ main .imgcontainer p {
   height: 100%;
 }
 
+div.fedi  {
+  border-style: dashed;
+  max-width: 50%;
+  align-self: center;
+  padding: 10px
+}
+
+.profile {
+  height: 60px;
+  padding-right: 10px;
+  display: inline;
+}
+
+img.profile {
+  float: left
+}
+
+div.fedi > article {
+  display: inline-block;
+}
+
+div.fedi > img.media {
+  max-width: 100%;
+}
+
 @media screen and (max-width: 800px) {
   main {
     width: 95%;
@@ -209,6 +234,10 @@ main .imgcontainer p {
     /* visibility: hidden !important; */
 
     width: 95%;
+  }
+
+  div.fedi  { 
+    max-width: 100%;
   }
 
   .widgets {

@@ -14,6 +14,10 @@
   <link rel="pingback" href="https://webmention.io/{{ config.CNAME }}/xmlrpc" />
   <link rel="alternate" type="application/rss+xml" title="RSS Feed for nebula" href="/feed.rss" />
 
+  {% if nutshell == 'true' %}
+  <script src="https://cdn.jsdelivr.net/gh/ncase/nutshell/nutshell.js"></script>
+  {% endif %}
+
   {% if code == 'true' %}
   <link rel="stylesheet" href="/static/default.min.css" />
   {% endif %}
