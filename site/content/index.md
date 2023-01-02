@@ -10,20 +10,22 @@ musicframe: "true"
 
 ## Activism - Software - Being Queer
 
-![Yours truly :3](static/me.png)
+<div class="h-card">
+<img alt="Yours truly :3" src="static/me.png" class="u-photo"/>
 
 ---
 
 ## [h-card](https://indieweb.org/h-card)  
 
-Name: Arcade Wise  
+Name: 
+<span class="p-name">Arcade Wise</span>  
 Email:
-<a href="mailto:l3gacy.b3ta@gmail.com" rel="me">l3gacy.b3ta@gmail.com</a>  
+<a class="u-email" href="mailto:l3gacy.b3ta@gmail.com" rel="me">l3gacy.b3ta@gmail.com</a>  
 Fediverse:
 <a rel="me" href="https://catcatnya.com/@arcade">@arcade@catcatnya.com</a>  
 GH: <a href="https://github.com/l3gacyb3ta" rel="me">l3gacyb3ta</a>  
 sourcehut: <a href="https://sr.ht/~arcade" rel="me">~arcade</a>
-
+</div>
 ---
 
 ## Projects!
