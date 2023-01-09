@@ -1,38 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
 <channel>
-<link>https://arcadewise.me</link>
-<description>Arcade's digital home</description>
+<link>https://arcades.agency</link>
+<description>Aethopica</description>
 <item>
 	<title>Stickers - Random Thoughts</title>
-	<link>https://arcadewise.me//rndm/stickers</link>
+	<link>https://arcades.agency//rndm/stickers</link>
 </item>
 <item>
 	<title>Dithering - rndm</title>
-	<link>https://arcadewise.me//rndm/dithering</link>
+	<link>https://arcades.agency//rndm/dithering</link>
 </item>
 <item>
 	<title>My (not so first) first thoughts on web3</title>
-	<link>https://arcadewise.me//web3</link>
+	<link>https://arcades.agency//web3</link>
 </item>
 <item>
 	<title>goblins</title>
-	<link>https://arcadewise.me//goblins</link>
+	<link>https://arcades.agency//goblins</link>
 </item>
 <item>
 	<title>hedonism</title>
-	<link>https://arcadewise.me//hedonism</link>
+	<link>https://arcades.agency//hedonism</link>
 </item>
 <item>
 	<title>nebula - a home on the net</title>
-	<link>https://arcadewise.me//index</link>
+	<link>https://arcades.agency//index</link>
 </item>
 <item>
 	<title>Zombie Programmers and Mr. Barthes</title>
-	<link>https://arcadewise.me//zombieProgrammers</link>
+	<link>https://arcades.agency//zombieProgrammers</link>
 </item>
 <item>
 	<title>nebula - ai disclousure</title>
-	<link>https://arcadewise.me//AI</link>
+	<link>https://arcades.agency//AI</link>
 </item>
 </channel></rss>

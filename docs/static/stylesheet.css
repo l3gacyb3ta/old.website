@@ -124,7 +124,7 @@ main .imgcontainer p {
   color: var(--text-color);
   border: 2px solid var(--border-color);
   padding: 0;
-  height: 200px;
+  height: 280px;
   box-shadow: 5px 5px 0px 0px var(--shadow-color);
   margin-bottom: 3rem;
   position: relative;

@@ -11,7 +11,7 @@ nutshell: "true"
 
 So, the [Spritely Institute](https://spritely.institute/) has been working on
 some very interesting tech in the distributed computing[^1] space. as was introduced to me by Christine.
-(Here's her introduction!)
+(Here's her introduction, she's awesome!)
 [](mastodon:octodon.social/109388563865627081)
 
 ```lisp

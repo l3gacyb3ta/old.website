@@ -26,6 +26,7 @@ Fediverse:
 GH: <a href="https://github.com/l3gacyb3ta" rel="me">l3gacyb3ta</a>  
 sourcehut: <a href="https://sr.ht/~arcade" rel="me">~arcade</a>
 </div>
+
 ---
 
 ## Projects!
@@ -57,6 +58,7 @@ sourcehut: <a href="https://sr.ht/~arcade" rel="me">~arcade</a>
   - [previous](https://miniclub.amongtech.cc/prev/arcadewise.me)
   - [random](https://miniclub.amongtech.cc/random)
   - [next](https://miniclub.amongtech.cc/next/arcadewise.me)
+- [Lieu](https://webring.xxiivv.com/)
 
 ---
 
