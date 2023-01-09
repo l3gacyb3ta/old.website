@@ -1,5 +1,5 @@
 ---
-title: "nebula - a home on the net"
+title: "aethopica - a home on the net"
 permalink: "/index"
 ai: "true"
 music: "true"
