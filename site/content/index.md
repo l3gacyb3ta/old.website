@@ -45,6 +45,7 @@ sourcehut: <a href="https://sr.ht/~arcade" rel="me">~arcade</a>
 
 ## Writing!
 
+- [Goblins: They are the future](/goblins.html) : I love goblins!
 - [My (not so) first thoughts on Web 3](/web3.html) : web3 and its horrors.
 - [Hedonism](/hedonism.html) : Hedonism and why it rocks.
 - [Zombie Programmers and Mr. Barthes](/zombieProgrammers.html) : Does the author of a piece of code die?
