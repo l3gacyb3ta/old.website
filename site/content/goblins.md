@@ -297,7 +297,7 @@ in case you want to run it yourself!
 
 ## Thanks :3
 
-This was all introduced to me by Christine Lloyd-Webber
+This was all introduced to me by Christine Lemmer-Webber
 (Here's her introduction, she's awesome!)
 [](mastodon:octodon.social/109388563865627081)
 
