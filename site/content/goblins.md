@@ -4,7 +4,6 @@ permalink: "/goblins"
 comments: "false"
 code: "true"
 postid: "goblins"
-nutshell: "true"
 ---
 
 # Spritely's Goblins and How They're Gonna Steal the Future
