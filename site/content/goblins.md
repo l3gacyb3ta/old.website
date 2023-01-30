@@ -295,7 +295,7 @@ My contact info is on my [index](/) page
 [Here it is](https://paste.sr.ht/~arcade/bd22683e8a1c082e811fca173a2546ba017fcb40)
 in case you want to run it yourself!
 
-## Thanks :3
+## Thanks sm :3
 
 This was all introduced to me by Christine Lemmer-Webber
 (Here's her introduction, she's awesome!)
