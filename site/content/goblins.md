@@ -1,5 +1,5 @@
 ---
-title: "goblins"
+title: "Spritely's Goblins and How They're Gonna Steal the Future"
 permalink: "/goblins"
 comments: "false"
 code: "true"
@@ -263,7 +263,7 @@ Let's give my partner this ability using this new restricted editor.
 (define-values (grocery-editor-for-partner) (spawn-editor-for-one-item 2 todo-editor))
 ```
 
-Look! they can edit index number zero only.
+Look! they can edit index number two only.
 
 Theoretically, we could have now sent that capability over the network
 (I'm not going to write netcode yet).
