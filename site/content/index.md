@@ -22,7 +22,7 @@ Name:
 Email:
 <a class="u-email" href="mailto:l3gacy.b3ta@gmail.com" rel="me">l3gacy.b3ta@gmail.com</a>  
 Fediverse:
-<a rel="me" href="https://catcatnya.com/@arcade">@arcade@catcatnya.com</a>  
+<a rel="me" href="https://commune.anarchist.gay/@arcade">@arcade@commune.anarchist.gay</a>  
 GH: <a href="https://github.com/l3gacyb3ta" rel="me">l3gacyb3ta</a>  
 sourcehut: <a href="https://sr.ht/~arcade" rel="me">~arcade</a>
 </div>
