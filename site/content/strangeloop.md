@@ -20,7 +20,7 @@ As I got to the bueatiful Stifel Theater, where the opening and closing keynotes
 one thing that suprised me was the fact that Coca-Cola products weren't the only drinks at the event. That might seem wierd to most of you, but coming from Atlanta, I don't think
 I've seen a place or event with any Pepsi product in a 50 mile radius of the magnificently oppulent "World Of Coke" in downtown ATL. 
 
-![The Stifel Theater's amazing roof, including some cool projection art](/static/me.png)
+![The Stifel Theater's amazing roof, including some cool projection art](/static/SL23stifeltheater.jpg)
 
 The opening keynote was lead by [Taylor Poindexter](https://www.poindexter.dev/) from Spotify, and [Scott Hanselman](https://www.hanselman.com/) from Microsoft. 
 While funny, I found most of the advice less than radical, albeit helpful. For example, the idea that **feedback without trust is not feedback** is a very good way to frame why
